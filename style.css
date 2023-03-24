@@ -2,7 +2,11 @@
 
 html,
 body {
-  color: #0f0e0e;
+  background-image: url("https://i.pinimg.com/originals/54/f6/b6/54f6b6f2ae1a943856acc5d8479a1a9c.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
@@ -13,20 +17,32 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6
+{
   font-family: "Rubik", sans-serif;
   font-weight: normal;
   margin: 0;
+  padding: 5px;
+  color:white;
+}
+
+p {
+  padding: 5px;
+  margin: 0;
+  color:white;
 }
 
 header {
-  background: #5c946e;
-  border-bottom: 3px solid #4f7d5d;
+  background: linear-gradient(to bottom, rgb(28, 28, 28),rgb(61, 61, 61));
+  border-bottom: 3px solid #00a2ff;
   color: #fbf5f3;
+  display:grid;
+  grid-auto-flow: column;
+  align-items: center;
 }
 
-header h1 {
-  padding: 25px;
+header h1, h2 {
+  padding: 5px;
 }
 
 header h1 span {
@@ -39,30 +55,66 @@ header h1 span {
   display: grid;
   gap: 15px;
   grid-template-columns: repeat(3, 1fr);
-  margin: 25px auto;
-  width: 75%;
+  margin: 50px;
+  width: 50%;
 }
 
 button {
-  border: 2px solid #5c946e;
+  border: 2px solid #89a8de;
   border-radius: 5px;
-  background: #4f7d5d;
-  color: #fbf5f3;
+  background: #60e8e2;
+  color: #000000;
   cursor: pointer;
   font-weight: bold;
   padding: 10px;
+  transition: 0.5s;
 }
 
 button:hover {
-  border: 2px solid #4f7d5d;
-  background: #5c946e;
+  border: 2px solid #4f5f7d;
+  background: #5aadff;
+  transition: 0.5s;
 }
 
 .card {
-  border: 3px solid #4f7d5d;
+  border: 3px solid #4f5c7d;
   padding: 25px;
+  background: linear-gradient(to bottom, rgb(61, 61, 61), rgb(28, 28, 28));
+  transition: 0.1s;
 }
 
 .hidden {
   display: none;
+}
+
+.unhidden {
+  display: inline-block;
+  color: rgb(0, 233, 0);
+  text-shadow: 1px 1px black;
+}
+
+section {
+  display:flex;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: cyan;
+}
+
+@media only screen and (max-width: 1200px){
+  /*Tablets [601px -> 1200px]*/
+}
+@media only screen and (max-width: 600px){
+/*Big smartphones [426px -> 600px]*/
+}
+@media only screen and (max-width: 425px){
+/*Small smartphones [325px -> 425px]*/
+  header {
+    display:flex;
+  }
+  #new-question-form {
+    display: none;
+  }
 }
