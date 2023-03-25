@@ -42,6 +42,12 @@ triviaButton.addEventListener("click", (event) => {
                 }
             })
             correctAnswer.textContent = questions[index].correct_answer
+            // Difficulty will change the border of the card
+            if(questions[index].difficulty === "medium"){
+                article.setAttribute("style", "border: 3px solid #f9fd3c")
+            } else if (questions[index].difficulty === "hard"){
+                article.setAttribute("style", "border: 3px solid #c81b00")
+            }
             //adding the API results to a card
             cards.append(article)
             console.log(questions[index]);
