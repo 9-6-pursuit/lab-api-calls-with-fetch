@@ -34,12 +34,12 @@ document.querySelector("form").addEventListener("submit", (event) => {
     const addTrivia = (trivia) => {
 // Select the <main> element
     const main = document.querySelector("main.centered");
-// If there are questions on the page, remove them before adding new ones
+// While there are questions on the page, remove them before adding new ones
  // Remove all child elements (questions) from the <main> element
     while (main.firstChild) {
         main.removeChild(main.firstChild);
     };
-// Loop through the trivia questions and add them to the <main> element
+// Loop through the trivia questions and add 10 of them to the <main> element
     for (let i = 0; i < 10; i++) {
 // Create a new <article> element with a class attribute
         const article = document.createElement("article");
