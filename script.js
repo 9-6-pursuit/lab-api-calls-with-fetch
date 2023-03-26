@@ -52,11 +52,20 @@ document.querySelector("form").addEventListener("submit", (event) => {
             <button>Show Answer</button>
             <p class="hidden">${trivia.results[i].correct_answer}</p>
         `;
+        const button = article.querySelector("button");
+        const hiddenContent = article.querySelector(".hidden");
+
 // Add an event listener to the "Show Answer" button
         article.querySelector("button").addEventListener("click", () => {
             // Show the answer by changing the display property of the <p> element
-            article.querySelector(".hidden").style.display = "block";
-        });
+            if (hiddenContent.style.display === "none") {
+                hiddenContent.style.display = "block";
+                button.textContent = "Hide Answer"
+            } else {
+                hiddenContent.style.display = "none";
+                button.textContent = "Show Answer"
+            }
+});
 // Append the <article> element to the <main> element
         main.append(article);
     };
