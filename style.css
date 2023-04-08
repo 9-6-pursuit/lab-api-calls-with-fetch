@@ -66,3 +66,19 @@ button:hover {
 .hidden {
   display: none;
 }
+
+.easy {
+  background-color: lightblue;
+  padding: 10%;
+}
+
+.medium {
+  background-color: lightyellow;
+  padding: 10%;
+}
+
+.hard {
+  background-color: pink;
+  padding: 10%;
+}
+
