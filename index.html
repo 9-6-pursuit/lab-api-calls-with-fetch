@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script defer src="script.js"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,12 +13,18 @@
       <h1>Trivia Questions</h1>
     </header>
     <section class="centered">
-      <form>
+      <form id="form">
         <button type="submit">Get New Questions</button>
       </form>
     </section>
     <main class="centered">
       <!-- Your `.card` elements should show up here. -->
+      <article class="card">
+        <h2></h2>
+        <p id = "question"></p>
+        <button id = "show-answer"></button>
+        <p class="hidden"></p>
+      </article>
     </main>
   </body>
 </html>
